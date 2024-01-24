@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
-const dotenv = require('dotenv');
-dotenv.config();
+require("dotenv").config();
 
-// const mongoUri ="mongodb+srv://main:MainATnoteswift9@noteswift.ngfs69r.mongodb.net/noteswift?retryWrites=true&w=majority"
-const mongoUri = "mongodb+srv://main:MainATnoteswift9@noteswift.ngfs69r.mongodb.net/?retryWrites=true&w=majority"
+const mongoUri =process.env.REACT_APP_DB
 
 const connectToMongo = async () =>{
     try{
